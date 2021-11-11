@@ -37,27 +37,25 @@
         .r1,
         .r3 {
             display: grid;
-            background-color:#9BC1BC;
+            background-color: #ccc;
             padding: 1em;
             width: 100%;
             align-items: center;
         }
+
         .r3 {
             text-align: center;
-            color: #f4f1bb
         }
 
         .r2 {
             height: 100%;
-            background-color:#9BC1BC;
+            background-color: #f1f1f1;
         }
 
-        .three-column {
+        .one-column {
             display: grid;
-            grid-template-columns: 2fr 8fr 3fr;
-            background-color:#9BC1BC;
+            background-color: #fff;
             grid-column-gap: 1em;
-            color:#F4F1BB;
         }
 
         .c1 {
@@ -66,7 +64,7 @@
 
         .c1,
         .c3 {
-            background-color:#9BC1BC;
+            background-color: #9BC1BC;
         }
 
         .txt-center {
@@ -79,13 +77,12 @@
 
         .left-nav {
             list-style-type: none;
-            color:#F4F1BB
         }
 
         .left-nav>li>a {
             display: block;
             padding: 15px 0px 15px 30px;
-            background-color:#9BC1BC ;
+            background-color: #f4f4f4;
             font-weight: bold;
             text-decoration: none;
             transition-duration: 0.7s;
@@ -93,7 +90,7 @@
         }
 
         .left-nav>li>a:hover {
-            background-color:#E6EBE0 ;
+            background-color: #8d8c8c;
         }
 
         .c2 {
@@ -102,14 +99,12 @@
             grid-template-columns: repeat(4, 1fr);
             /* grid-template-rows: 1fr 1fr 1fr;*/
             grid-auto-rows: min-content;
-            background-color:#9BC1BC ;
         }
 
         .h2-content {
             grid-column: 1 / 5;
             height: 22px;
             width: 100%;
-            color:#F4F1BB
         }
 
         .c2>img {
@@ -117,60 +112,22 @@
             align-self: center;
             max-height: 130px;
         }
-        .r1 >img{
-            max-height:130px;
-        }.txt-paragraphs{
-            grid-column: 1/5;
-            color: #F4F1BB;
-        }
-        .link{
-            color:#F4F1BB;
-        }
-        .nav{
-            background-color: #9BC1BC;
-        }
     </style>
 </head>
 
 <body class="main-container-grid">
 
     <div class="r1 box-shadow">
-        <img src="img/sm_logo.jpg">
     </div>
-    <div class="r2 three-column">
-        <div class="c1 box-shadow">
-            <h2 class="txt-center Nav">Navigation</h2>
-            <ul class="left-nav">
-                <li class="link"> <a href="index.html">Home</a> </li>
-                <li class="link"> <a href="about.html">About</a> </li>
-                <li class="link"> <a href="contact.html">Contact</a> </li>
-                <li class="link"> <a href="gallery-table.html">Gallery</a> </li>
-                <li class="link"> <a href="login.html">Login</a> </li>
-            </ul>
-        </div>
+    <div class="r2 one-column">
         <div class="c2">
-            <h2 class="txt-center h2-content">Recent Products</h2>
-            <div class="txt-paragraphs">
-                <p>Welcome to Gourmet Coffee & Tea</p>
-                <p>Below are just a few options </p>
-                <P>Please browse the website</P>
-                <p>Stop by one of our locations for good coffee</p>
-                <p>"Coffee is what keeps us going"</p>
-            </div>
-            <img class="box-shadow" src="./img/image_1.jpeg">
-            <img class="box-shadow"src="./img/image_2.jpeg">
-            <img class="box-shadow"src="./img/image_3.jpeg">
-            <img class="box-shadow"src="./img/image_4.jpeg">
-            <img class="box-shadow"src="./img/image_5.jpeg">
-            <img class="box-shadow"src="./img/image_6.jfif">
+            <form class="contact-form">
+                <input placeholder="User Name" type="text" id= "first-name" class="contact-input">
+                <input placeholder="Password" type="password" id= "password" class="contact-input">
+                <button onclick="goToHome()" class="submit-button" type="submit">Login</button>
+            </form>
         </div>
-        <div class="c3 box-shadow">
-            <h2 class="txt-center">Recent product</h2>
         </div>
     </div>
-    <div class="r3">
-        Copyright 2021 - Created by Matthew Venturella For educational purpose only! No orders shall be fulfilled
-    </div>
+    <script type= "text/javascript" src="./js/Contact.js"></script>
 </body>
-
-</html>
